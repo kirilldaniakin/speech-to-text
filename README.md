@@ -2,7 +2,7 @@
 Simple python console application for modifying a wav audio speed and volume and translating speech in it into text offline.  
 Input audio file must be WAV format mono PCM.
 
-Usage: speech_to_text.py rate_factor volume_factor path_to/audio_in.wav path_to/audio_out.wav
+Usage: python speech_to_text.py rate_factor volume_factor path_to/audio_in.wav path_to/audio_out.wav
 
 The audio with modified speed and volume will be saved to path_to/audio_out.wav  
 

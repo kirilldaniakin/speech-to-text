@@ -23,6 +23,7 @@ def modify_audio(audio: np.ndarray, rate: float, volume_factor: float) -> np.nda
     """
     return time_stretch(audio, rate=rate) * volume_factor
 
+
 def _speech_recognition(model_on_disk: str, wav: wave.Wave_read) -> Dict:
     # initialize the model and speech recognizer
     model = Model(model_on_disk)
@@ -37,6 +38,7 @@ def _speech_recognition(model_on_disk: str, wav: wave.Wave_read) -> Dict:
             print(json.loads(rec.PartialResult()))
 
     return json.loads(rec.FinalResult())
+
 
 def speech_to_text(wav: wave.Wave_read, models_on_disk: List[str]) -> Dict:
     """
@@ -55,6 +57,7 @@ def speech_to_text(wav: wave.Wave_read, models_on_disk: List[str]) -> Dict:
         wav.rewind()
 
     return out_dict
+
 
 if __name__ == "__main__":
     SetLogLevel(0)
